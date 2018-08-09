@@ -7,9 +7,14 @@
   <title>Account Page</title>
 </head>
 
-<body>
-  <h1>Welcome back!</h1>
-  <p>This is were information about you goes, along with a profile picture.</p>
-  <img src='src/app/account/profile.png'>
-</body>
+<body>  
+    <h1>This is my second page</h1>
+    <h3>ID: {{id}} User: {{username}}</h3>
+    <h3>Birthday: {{dob}} Age: {{age}}</h3>
+    <img src='src/app/account/profile.png'>
+    <form (submit) = "logoutUser($event)">
+      <button type="logout">Logout</button>
+    </form>
+  </body>
+
 </html>

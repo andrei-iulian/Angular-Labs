@@ -21,6 +21,9 @@ export class LoginComponent implements OnInit {
   loginUser(event) {
     event.preventDefault();
     if (this.username == "georg@gmail.com" && this.password == 'suckz') {
+      var user = JSON.parse(sessionStorage.user);
+      user.username = this.username;
+      sessionStorage.user = JSON.stringify(user);
       this.router.navigateByUrl('/account');
     } else {
       alert("Wrong Username and Password!");
